@@ -26,11 +26,23 @@ InvestOverview/
 └── requirements.txt
 ```
 
-## Building the .exe
+## Run via .exe
 
 To build the executable from the `.spec` file, it's necessary to do:
 
 ```bash
 pip install pyinstaller
 pyinstaller InvestOverview.spec
+```
+
+To run the `.exe` file, do:
+```bash
+InvestOverview.exe --excel_path "C:\\path\\to\\your\\portfolio.xlsx"
+```
+
+## Run directly in the terminal
+
+To run the code directly, do:
+```bash
+python -m src.invest_overview --excel_path "C:\\path\\to\\your\\portfolio.xlsx"
 ```

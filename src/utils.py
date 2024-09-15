@@ -15,6 +15,16 @@ TAGS = {
 CATEGORIES = list(TAGS.keys())
 INVEST_TYPES = ["etf", "fund", "stock"]
 
+CONTINENT_MAPPING = {
+    "North America": "Nordamerika",
+    "Europe": "Europa",
+    "Asia": "Asien",
+    "Oceania": "Pazifik",
+    "South America": "Lateinamerika",
+    "Eastern Europe": "Osteuropa",
+    "Africa": "Afrika"
+}
+
 SRC_DIR = Path(__file__).parent
 CONFIG_PATH = Path(SRC_DIR, 'config.json')
 
