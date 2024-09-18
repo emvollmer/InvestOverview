@@ -17,3 +17,6 @@ env/
 
 # Windows
 Thumbs.db
+
+# Other
+_archive/

@@ -13,7 +13,7 @@ class ExcelWorker:
         self.excel_path = Path(excel_path)
         check_file(self.excel_path)
 
-        if not self.excel_path.suffix == ".xlsx":
+        if not (self.excel_path.suffix == ".xlsx" or self.excel_path.suffix == ".xlsm"):
             raise ValueError(
                 f"The provided file '{self.excel_path}' is not an excel!"
             )

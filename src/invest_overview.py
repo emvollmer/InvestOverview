@@ -13,9 +13,11 @@ logger = logging.getLogger(__name__)
 
 
 def parse_arguments():
+    """Parse arguments from user.
+    """
     parser = argparse.ArgumentParser(description="Process some inputs for Excel path.")
     parser.add_argument('--excel_path', type=str,
-                        help=f'Path to the Excel file. Default (from config.json): "{EXCEL_PATH}"',
+                        help=f'Path to the Excel file. Default: "{EXCEL_PATH}"',
                         default=EXCEL_PATH)
     return parser.parse_args()
 
@@ -23,8 +25,9 @@ def parse_arguments():
 def main(
         xlsx_path: str = EXCEL_PATH
 ):
+    """Coordinate invest overview calculations.
+    """
     xlsx_path = Path(xlsx_path)
-    # xlsx_path = Path("C:/Users/EV/Documents/Finance meetings/2024-08-25_Portfolio_testing3.xlsx")
 
     ut.check_file(xlsx_path)
     if xlsx_path is not EXCEL_PATH:
@@ -56,7 +59,7 @@ def adjust_parsed_investment_percentages(
 ):
     """
     Adjusts the percentages in parsed_invest_data based on the amount
-    of money planned to be invested.
+    of invested money.
 
     :param investments: List of tuples where each tuple
         contains an ISIN and amount.
