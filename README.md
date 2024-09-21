@@ -1,4 +1,4 @@
-# Invest Overview
+<img src="./images/logo_with_text.png" alt="InvestOverview Logo" width="300"/>
 
 This repo helps provide an overview of your financial portfolio, specifically 
 the total distribution across countries, regions, industries,
@@ -14,7 +14,7 @@ in your Excel portfolio.
 ## Installation and Usage
 
 While the code can be run directly via CL, the most efficient way is use it
-is via a `.exe` file in combination with an excel VBA macro button, as
+is via a `.exe` file in combination with an Excel VBA macro button, as
 demonstrated in the `example_portfolio.xlsm`. This requires the following:
 
 1. Download the `examples/example_portfolio.xlsm` file, place it in your folder of
@@ -33,13 +33,13 @@ pyinstaller InvestOverview.spec
 
 You can now press the button in the `portfolio.xlsm` to execute the VBA macro and
 update the pie charts with current information. The calculated values will be saved
-to a separate excel `_investment_overview_python.xlsx` file.
+to a separate Excel `_investment_overview_python.xlsx` file.
 
 > **Note:** A time limit of 5 minutes is currently placed on button execution.
 > If your internet connection is very slow or your number of investments very
 > large this may cause `PermissionDeniedErrors` during execution.
-> It will be necessary to amend the line in question your button macro
-> (see `vba/RunInvestOverview.bas`).
+> It will be necessary to amend [this line](https://github.com/emvollmer/InvestOverview/blob/main/vba/RunInvestOverview.bas#L45)
+> of your button macro.
 
 ### Direct Usage
 
